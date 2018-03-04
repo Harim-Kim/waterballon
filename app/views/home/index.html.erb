@@ -1,0 +1,185 @@
+<style type="text/css">
+    html {
+      height: 100%;
+    }
+    body {
+      min-height: 100%;
+    }
+    .phone{
+        max-width:100%;
+    }
+    .kakao{
+        width:15px;
+    }
+    
+ @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); .notosanskr * { font-family: 'Noto Sans KR', sans-serif; } 
+ h1,h4{
+      font-family: 'Noto Sans KR';
+      /*text-shadow: 1px 1px #212121;*/
+ }
+
+    @media (min-width: 700px){
+        .logo_div{
+            text-align:center;
+            padding:60px;
+        }
+        h1{
+        /*text-shadow: 1px 1px gray;*/
+            font-size:3rem;
+            
+        }
+        h4{
+            font-size:22px;
+            margin-bottom:5%;
+        }
+        .heading-small{
+            font-size:36px;
+        }
+        .download{
+            width:100%;
+        }
+        .logo{
+            width:100px;
+            
+        }
+        .small{
+            font-size:14px;
+        }
+        .info{
+            
+           
+            margin-bottom:12%;
+        }
+        .links{
+            margin-top:10px;
+            padding-left:5px;
+        }
+        .heading{
+            font-size:3rem; 
+            background-color:rgba(255,255,255,0.6);
+        }
+    }
+    @media (max-width: 700px){
+        *{
+            text-align:center;
+        }
+        .logo_div{
+            text-align:center;
+            padding:30px;
+            padding-top:30%;
+        }
+        .logo{
+            width:80px;
+        }
+        .heading{
+            font-size:25px;
+            background-color:rgba(255,255,255,0.6);
+        }
+        .info{
+            margin-bottom:80%;
+             
+        }
+        .heading-small{
+            font-size:18px;
+        }
+        h4{
+            font-weight:700;
+            font-size:18px;
+            margin-bottom:10%;
+        }
+        .small{
+            font-size:14px;
+        }
+        .download{
+            width:100%;
+        }
+        .mobile{
+            margin-bottom:80%;
+        }
+        .bottom > img{
+            padding-bottom:40px;
+            padding-top:20px;
+        }
+        .links{
+            padding-top:20px;
+        }
+        .video-background{
+            display:none;
+        }
+    }
+    * { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*pointer-events: none;*/
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+
+</style>
+
+<div class="container" >
+    <div class="video-background">
+        <div class="video-foreground">
+    
+          <iframe src="https://www.youtube.com/embed/n4HDz2R_nO4?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=n4HDz2R_nO4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-12 logo_div">
+    <!--<h1>물풍선</h1>-->
+    <%=image_tag 'unnamed.png',class:"logo"%>
+    </div>
+    <div class="clearfix" ></div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="info">
+            <span class="heading">차라리 버튼에 가깝다. <br><span class="heading-small">세상 편한 생수배송앱, 물풍선</span></span>
+            </div>
+            <!--<div class="info">-->
+                <h4 >더 심플하게, 버튼 하나로 주문완료 <br> <span class="small">매번 사먹는 똑같은 생수를 위해 시간 낭비하지마세요. 버튼을 누르기만 하세요.</span></h4>
+                <h4 >더 귀찮아지기 전에, 맞춤형 스마트 알람 <br> <span class="small">구매주기를 파악해 생수가 떨어지기 전에 미리 주문할 수 있도록 알람을 보내드려요.</span></h4>
+                <h4 class="mobile">더 저렴하게, 최저가 수준의 구매가 <br> <span class="small">저렴한 생수가격에 무료배송까지</span></h4>
+            <!--</div>-->
+            <br>
+            <div class="row" style="margin-top:41px">
+                <div class="col-md-3 col-6 "><a href="/home/index" target="_blank"><%=image_tag "google-play-badge.png",class:"download"%></a></div>
+                <div class="col-md-3 col-6"><a href="/home/index" target="_blank"><%=image_tag "iphone_download.svg",class:"download"%></a></div>
+            </div>
+            <div class="links">
+                <p style="margin:0;padding:0; text-align:left"><i class="fas fa-envelope"></i> waterballoon.official@gmail.com</p>
+                <p style="margin:0;padding:0; text-align:left"><%=image_tag 'kakao.png', class:'kakao'%> @물풍선 / @mps</p>
+            </div>
+            
+        </div>
+        <div class="col-md-5 bottom" >
+            <%=image_tag 'mockup01(3).png',class:"phone"%>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
